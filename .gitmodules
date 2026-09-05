@@ -1,0 +1,12 @@
+[submodule "skill-commands"]
+	path = skill-commands
+	url = git@github.com:Glaicer/supercode-skill-commands.git
+[submodule "token-usage-panel"]
+	path = token-usage-panel
+	url = https://github.com/Glaicer/supercode-token-usage-panel.git
+[submodule "plugin-updater"]
+	path = plugin-updater
+	url = git@github.com:Glaicer/supercode-plugin-updater.git
+[submodule "session-recap"]
+	path = session-recap
+	url = git@github.com:Glaicer/supercode-session-recap.git
