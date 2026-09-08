@@ -13,3 +13,6 @@
 [submodule "autoinvoke-skill-gate"]
 	path = autoinvoke-skill-gate
 	url = git@github.com:Glaicer/supercode-autoinvoke-skill-gate.git
+[submodule "hashline-editing"]
+	path = hashline-editing
+	url = https://github.com/Glaicer/supercode-hashline-editing.git
