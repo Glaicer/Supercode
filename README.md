@@ -30,9 +30,14 @@ The recap is written by OpenCode's `small_model` — the same lightweight model 
 
 
 
+## [Autoinvoke Skill Gate](https://github.com/Glaicer/supercode-autoinvoke-skill-gate)
+
+Stops the model from auto-using your manual-only skills. Claude Code, Codex, and OpenCode v2 already have a way to mark a skill as "don't auto-invoke me" — OpenCode v1 just ignores it, so the model sees everything and may grab the wrong skill on its own. This one strips those manual-only skills from `<available_skills>`, cleaning up context and preventing surprise side effects. Nothing is blocked: `/my-skill` or "use my-skill" still works — it just never happens automatically.
+
+
+
 > [!NOTE]
 > More plugins are currently in development and will be shipped soon:
-> - **autoinvoke-skill-gate**: hides skills with `disable-model-invocation` from `<available_skills>` cleaning up context and preventing LLMs to use them without asking
 > - **auto-approval-reviewer**: a must-have feature of Codex and Claude Code that uses LLM to evaluate the security of commands before running them.
 > - **goal-loop**: `/goal "<done-condition>"` keeps the agent working through idle until a judge verdict says it's met. A lot of harnesses has it already, but OpenCode doesn't.
 > - **hashline-editing**: snapshot-guarded `read`/`edit` — patches apply by `[PATH#TAG]` and stale edits fail instead of clobbering.

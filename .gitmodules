@@ -10,3 +10,6 @@
 [submodule "session-recap"]
 	path = session-recap
 	url = git@github.com:Glaicer/supercode-session-recap.git
+[submodule "autoinvoke-skill-gate"]
+	path = autoinvoke-skill-gate
+	url = git@github.com:Glaicer/supercode-autoinvoke-skill-gate.git
