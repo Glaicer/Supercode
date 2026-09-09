@@ -16,3 +16,6 @@
 [submodule "hashline-editing"]
 	path = hashline-editing
 	url = https://github.com/Glaicer/supercode-hashline-editing.git
+[submodule "context-progress-bar"]
+	path = context-progress-bar
+	url = https://github.com/Glaicer/supercode-context-progress-bar.git

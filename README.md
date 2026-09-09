@@ -38,6 +38,11 @@ An OpenCode plugin for editing files by line number without the usual problems o
 
 Each read returns a [PATH#TAG] header tied to the exact file version you saw, and edit checks that tag before writing. Patches can replace, insert, append, and update multiple files at once, while line numbers always refer to the version you read. Duplicate code is safe, patches stay small, and if any file changed on disk, the whole edit stops before anything is written.
 
+## [Context Progress Bar](https://github.com/Glaicer/supercode-context-progress-bar)
+
+Replaces the built-in `Context` section in the TUI sidebar with a progress bar, so window occupancy is visible at a glance.
+
+Pairs with Token Usage Panel: that one shows total spend for the session family, this one shows window occupancy.
 
 
 > [!NOTE]
