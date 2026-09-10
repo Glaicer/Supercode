@@ -44,9 +44,13 @@ Replaces the built-in `Context` section in the TUI sidebar with a progress bar, 
 
 Pairs with Token Usage Panel: that one shows total spend for the session family, this one shows window occupancy.
 
+## [Turn Timer](https://github.com/Glaicer/supercode-turn-timer) 
+
+Shows how long the current turn has been running, live in the prompt footer — right after the built-in `▣ Build · <model>` 
 
 > [!NOTE]
 > More plugins are currently in development and will be shipped soon:
+>
 > - **auto-approval-reviewer**: a must-have feature of Codex and Claude Code that uses LLM to evaluate the security of commands before running them.
 > - **goal-loop**: `/goal "<done-condition>"` keeps the agent working through idle until a judge verdict says it's met. A lot of harnesses has it already, but OpenCode doesn't.
 > - **persistent-memory**: durable project `MEMORY.md` + per-session notes with FTS search via `memory.search`.

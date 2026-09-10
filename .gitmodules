@@ -19,3 +19,6 @@
 [submodule "context-progress-bar"]
 	path = context-progress-bar
 	url = https://github.com/Glaicer/supercode-context-progress-bar.git
+[submodule "turn-timer"]
+	path = turn-timer
+	url = https://github.com/Glaicer/supercode-turn-timer.git
