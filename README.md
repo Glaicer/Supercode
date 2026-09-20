@@ -30,7 +30,7 @@ The recap is written by OpenCode's `small_model` — the same lightweight model 
 
 ## [Autoinvoke Skill Gate](https://github.com/Glaicer/supercode-autoinvoke-skill-gate)
 
-Stops the model from auto-using your manual-only skills. Claude Code, Codex, and OpenCode v2 already have a way to mark a skill as "don't auto-invoke me" — OpenCode v1 just ignores it, so the model sees everything and may grab the wrong skill on its own. This one strips those manual-only skills from `<available_skills>`, cleaning up context and preventing surprise side effects. Nothing is blocked: `/my-skill` or "use my-skill" still works — it just never happens automatically.
+Stops the model from auto-using your manual-only skills. OpenCode v2 already has a mechanism to prevent model from invoking such skills; this plugins adds support for Claude Code and Codex markers. OpenCode v1 doesn't hide manual-only skills from the model, so this plugin completely remove them from `<available_skills>`section. Nothing is blocked: `/my-skill` or "use my-skill" still works — it just never happens automatically.
 
 ## [Hashline Editing](https://github.com/Glaicer/supercode-hashline-editing)
 
