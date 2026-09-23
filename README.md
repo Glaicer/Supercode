@@ -4,25 +4,25 @@ I spend most of my day inside OpenCode, so I started fixing the small things to 
 
 Every plugin here started as a personal itch, ships as its own tiny package, and lives in this repo as a git submodule.
 
-## [Skill Commands](https://github.com/Glaicer/supercode-skill-commands)
+## [Skill Commands](https://github.com/Glaicer/supercode-skill-commands) (OpenCode v1)
 
 Makes your skills show up in `/` autocomplete.
 
 OpenCode *already* registers every skill as a command — `/my-skill` just works — but the TUI quietly hides them from the popup, so a skill is only reachable if you happen to remember its name. This plugin re-registers each skill as an ordinary command, mirroring OpenCode's own discovery walk (up to the worktree root, nearer shadows farther). A real command always wins over a skill of the same name, so there are no duplicates — just your skills, finally visible.
 
-## [Plugin Updater](https://github.com/Glaicer/supercode-plugin-updater)
+## [Plugin Updater](https://github.com/Glaicer/supercode-plugin-updater) (OpenCode v1)
 
 OpenCode caches npm plugins and managed tools (prettier, pyright, …) forever. Whatever version was current on first install stays there. The fix used to be deleting cache folders by hand, but this needs to be done regularly, or you need to set up a schedule. Of course, I would like something to notify me when a new version of the package is released.
 
 This one checks once a day on startup, toasts you when something is stale, and `/plugin-updates` opens a review screen grouped into Plugins, Managed tools, and Skipped. Pick with Space, hit `U`, confirm — done on next restart.
 
-## [Token Usage Panel](https://github.com/Glaicer/supercode-token-usage-panel)
+## [Token Usage Panel](https://github.com/Glaicer/supercode-token-usage-panel) (OpenCode v1)
 
 See where the tokens went with detailed spending stats, cache rate, cost, and live token-per-second generation speed in a collapsible sidebar panel. 
 
 The totals include the parent session and every level of subagents beneath it.
 
-## [Session Recap](https://github.com/Glaicer/supercode-session-recap)
+## [Session Recap](https://github.com/Glaicer/supercode-session-recap) (OpenCode v1)
 
 A collapsible recap in the session sidebar: after every turn, two sentences max on where things stand. For when you return to a session after lunch and past-you left no notes.
 
@@ -32,7 +32,7 @@ The recap is written by OpenCode's `small_model` — the same lightweight model 
 
 Stops the model from auto-using your manual-only skills. OpenCode v2 already has a mechanism to prevent model from invoking such skills; this plugins adds support for Claude Code and Codex markers. OpenCode v1 doesn't hide manual-only skills from the model, so this plugin completely remove them from `<available_skills>`section. Nothing is blocked: `/my-skill` or "use my-skill" still works — it just never happens automatically.
 
-## [Hashline Editing](https://github.com/Glaicer/supercode-hashline-editing)
+## [Hashline Editing](https://github.com/Glaicer/supercode-hashline-editing) (OpenCode v1)
 
 An OpenCode plugin for editing files by line number without the usual problems of search-and-replace or shifting line positions. 
 
@@ -40,11 +40,11 @@ Each read returns a [PATH#TAG] header tied to the exact file version you saw, an
 
 ## [Context Progress Bar](https://github.com/Glaicer/supercode-context-progress-bar)
 
-Replaces the built-in `Context` section in the TUI sidebar with a progress bar, so window occupancy is visible at a glance.
+Replaces the built-in `Context` section in the TUI sidebar with a progress bar, so window occupancy is visible at a glance. Can optionally hide MCP section too.
 
 Pairs with Token Usage Panel: that one shows total spend for the session family, this one shows window occupancy.
 
-## [Turn Timer](https://github.com/Glaicer/supercode-turn-timer) 
+## [Turn Timer](https://github.com/Glaicer/supercode-turn-timer) (OpenCode v1)
 
 Shows how long the current turn has been running, live in the prompt footer — right after the built-in `▣ Build · <model>` 
 
