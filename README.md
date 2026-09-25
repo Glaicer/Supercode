@@ -6,9 +6,9 @@ Every plugin here started as a personal itch, ships as its own tiny package, and
 
 ## [Skill Commands](https://github.com/Glaicer/supercode-skill-commands) (OpenCode v1)
 
-Makes your skills show up in `/` autocomplete.
+For OpenCode v1, makes skills discoverable in `/` autocomplete. Skills already work as slash commands in v1, but the TUI doesn't list them in the popup; this plugin makes them visible without changing how they run.
 
-OpenCode *already* registers every skill as a command — `/my-skill` just works — but the TUI quietly hides them from the popup, so a skill is only reachable if you happen to remember its name. This plugin re-registers each skill as an ordinary command, mirroring OpenCode's own discovery walk (up to the worktree root, nearer shadows farther). A real command always wins over a skill of the same name, so there are no duplicates — just your skills, finally visible.
+**OpenCode v2:** This plugin is no longer needed. Use the built-in `@` skill picker instead; no installation is required.
 
 ## [Plugin Updater](https://github.com/Glaicer/supercode-plugin-updater) (OpenCode v1)
 
