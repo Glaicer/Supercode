@@ -4,19 +4,13 @@ I spend most of my day inside OpenCode, so I started fixing the small things to 
 
 Every plugin here started as a personal itch, ships as its own tiny package, and lives in this repo as a git submodule.
 
-## [Skill Commands](https://github.com/Glaicer/supercode-skill-commands) (OpenCode v1)
-
-For OpenCode v1, makes skills discoverable in `/` autocomplete. Skills already work as slash commands in v1, but the TUI doesn't list them in the popup; this plugin makes them visible without changing how they run.
-
-**OpenCode v2:** This plugin is no longer needed. Use the built-in `@` skill picker instead; no installation is required.
-
 ## [Plugin Updater](https://github.com/Glaicer/supercode-plugin-updater) (OpenCode v1)
 
 OpenCode caches npm plugins and managed tools (prettier, pyright, …) forever. Whatever version was current on first install stays there. The fix used to be deleting cache folders by hand, but this needs to be done regularly, or you need to set up a schedule. Of course, I would like something to notify me when a new version of the package is released.
 
 This one checks once a day on startup, toasts you when something is stale, and `/plugin-updates` opens a review screen grouped into Plugins, Managed tools, and Skipped. Pick with Space, hit `U`, confirm — done on next restart.
 
-## [Token Usage Panel](https://github.com/Glaicer/supercode-token-usage-panel) (OpenCode v1)
+## [Token Usage Panel](https://github.com/Glaicer/supercode-token-usage-panel)
 
 See where the tokens went with detailed spending stats, cache rate, cost, and live token-per-second generation speed in a collapsible sidebar panel. 
 
@@ -46,9 +40,15 @@ Pairs with Token Usage Panel: that one shows total spend for the session family,
 
 ## [Turn Timer](https://github.com/Glaicer/supercode-turn-timer) (OpenCode v1)
 
-Shows how long the current turn has been running, live in the prompt footer — right after the built-in `▣ Build · <model>` 
+Shows how long the current turn has been running, live in the prompt footer — right after the built-in `▣ Build · <model>`
 
-> [!NOTE]
+## [Skill Commands](https://github.com/Glaicer/supercode-skill-commands) (OpenCode v1 only)
+
+For OpenCode v1, makes skills discoverable in `/` autocomplete. Skills already work as slash commands in v1, but the TUI doesn't list them in the popup; this plugin makes them visible without changing how they run.
+
+**OpenCode v2:** This plugin is no longer needed. Use the built-in `@` skill picker instead; no installation is required.
+
+> \[!NOTE\]
 > More plugins are currently in development and will be shipped soon:
 >
 > - **auto-approval-reviewer**: a must-have feature of Codex and Claude Code that uses LLM to evaluate the security of commands before running them.
