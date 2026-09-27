@@ -1,14 +1,8 @@
-# Supercode
+# Supercode - a collection of OpenCode v2 plugins
 
 I spend most of my day inside OpenCode, so I started fixing the small things to make it more convinient. Then those fixes turned into this — a little shelf of tools I actually use every day.
 
 Every plugin here started as a personal itch, ships as its own tiny package, and lives in this repo as a git submodule.
-
-## [Plugin Updater](https://github.com/Glaicer/supercode-plugin-updater) (OpenCode v1)
-
-OpenCode caches npm plugins and managed tools (prettier, pyright, …) forever. Whatever version was current on first install stays there. The fix used to be deleting cache folders by hand, but this needs to be done regularly, or you need to set up a schedule. Of course, I would like something to notify me when a new version of the package is released.
-
-This one checks once a day on startup, toasts you when something is stale, and `/plugin-updates` opens a review screen grouped into Plugins, Managed tools, and Skipped. Pick with Space, hit `U`, confirm — done on next restart.
 
 ## [Token Usage Panel](https://github.com/Glaicer/supercode-token-usage-panel)
 
@@ -16,15 +10,21 @@ See where the tokens went with detailed spending stats, cache rate, cost, and li
 
 The totals include the parent session and every level of subagents beneath it.
 
-## [Session Recap](https://github.com/Glaicer/supercode-session-recap) (OpenCode v1)
+## [Session Recap](https://github.com/Glaicer/supercode-session-recap)
 
 A collapsible recap in the session sidebar: after every turn, two sentences max on where things stand. For when you return to a session after lunch and past-you left no notes.
 
-The recap is written by OpenCode's `small_model` — the same lightweight model that generates session titles — inside a throwaway child session that gets deleted afterwards. It costs almost nothing and leaves zero trace in your actual conversation.
+The recap is written by OpenCode's `small_model` — the same lightweight model that generates session titles — inside a throwaway child session that gets deleted afterwards. It costs almost nothing and leaves zero trace in your actual conversation. You can also configure recap model in plugin settings.
 
 ## [Autoinvoke Skill Gate](https://github.com/Glaicer/supercode-autoinvoke-skill-gate)
 
 Stops the model from auto-using your manual-only skills. OpenCode v2 already has a mechanism to prevent model from invoking such skills; this plugins adds support for Claude Code and Codex markers. OpenCode v1 doesn't hide manual-only skills from the model, so this plugin completely remove them from `<available_skills>`section. Nothing is blocked: `/my-skill` or "use my-skill" still works — it just never happens automatically.
+
+## [Plugin Updater](https://github.com/Glaicer/supercode-plugin-updater) (OpenCode v1)
+
+OpenCode caches npm plugins and managed tools (prettier, pyright, …) forever. Whatever version was current on first install stays there. The fix used to be deleting cache folders by hand, but this needs to be done regularly, or you need to set up a schedule. Of course, I would like something to notify me when a new version of the package is released.
+
+This one checks once a day on startup, toasts you when something is stale, and `/plugin-updates` opens a review screen grouped into Plugins, Managed tools, and Skipped. Pick with Space, hit `U`, confirm — done on next restart.
 
 ## [Hashline Editing](https://github.com/Glaicer/supercode-hashline-editing) (OpenCode v1)
 
@@ -38,9 +38,11 @@ Replaces the built-in `Context` section in the TUI sidebar with a progress bar, 
 
 Pairs with Token Usage Panel: that one shows total spend for the session family, this one shows window occupancy.
 
-## [Turn Timer](https://github.com/Glaicer/supercode-turn-timer) (OpenCode v1)
+## [Turn Timer](https://github.com/Glaicer/supercode-turn-timer) (OpenCode v1 only)
 
 Shows how long the current turn has been running, live in the prompt footer — right after the built-in `▣ Build · <model>`
+
+This plugin supports OpenCode v1 only as OpenCode v2 has builtin mechanism to show you turn time.
 
 ## [Skill Commands](https://github.com/Glaicer/supercode-skill-commands) (OpenCode v1 only)
 
