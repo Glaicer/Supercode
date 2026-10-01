@@ -20,13 +20,13 @@ The recap is written by OpenCode's `small_model` — the same lightweight model 
 
 Stops the model from auto-using your manual-only skills. OpenCode v2 already has a mechanism to prevent model from invoking such skills; this plugins adds support for Claude Code and Codex markers. OpenCode v1 doesn't hide manual-only skills from the model, so this plugin completely remove them from `<available_skills>`section. Nothing is blocked: `/my-skill` or "use my-skill" still works — it just never happens automatically.
 
-## [Plugin Updater](https://github.com/Glaicer/supercode-plugin-updater) (OpenCode v1)
+## [Plugin Updater](https://github.com/Glaicer/supercode-plugin-updater)
 
 OpenCode caches npm plugins and managed tools (prettier, pyright, …) forever. Whatever version was current on first install stays there. The fix used to be deleting cache folders by hand, but this needs to be done regularly, or you need to set up a schedule. Of course, I would like something to notify me when a new version of the package is released.
 
-This one checks once a day on startup, toasts you when something is stale, and `/plugin-updates` opens a review screen grouped into Plugins, Managed tools, and Skipped. Pick with Space, hit `U`, confirm — done on next restart.
+It checks npm once a day and toasts you when something is stale; `/plugin-updates` opens the review screen where you can observe plugins and managed tools and update them.
 
-## [Hashline Editing](https://github.com/Glaicer/supercode-hashline-editing) (OpenCode v1)
+## [Hashline Editing](https://github.com/Glaicer/supercode-hashline-editing)
 
 An OpenCode plugin for editing files by line number without the usual problems of search-and-replace or shifting line positions. 
 
@@ -65,6 +65,6 @@ For OpenCode v1, makes skills discoverable in `/` autocomplete. Skills already w
 Each plugin is its own repo, included here as a submodule. Easiest path is per-plugin, from its own README:
 
 ```bash
-opencode plugin <name> --global
+opencode plugin add @glaicer/supercode-<name>
 ```
 
