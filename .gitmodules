@@ -22,3 +22,6 @@
 [submodule "turn-timer"]
 	path = turn-timer
 	url = https://github.com/Glaicer/supercode-turn-timer.git
+[submodule "command-gate"]
+	path = command-gate
+	url = https://github.com/Glaicer/supercode-command-gate.git

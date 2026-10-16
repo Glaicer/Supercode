@@ -4,6 +4,12 @@ I spend most of my day inside OpenCode, so I started fixing the small things to 
 
 Every plugin here started as a personal itch, ships as its own tiny package, and lives in this repo as a git submodule.
 
+## [Command Gate](https://github.com/Glaicer/supercode-command-gate)
+
+Coding agents execute dozens of shell commands per session, and OpenCode's permissions are coarse: you either approve every `ls` by hand, or allow everything and hope the agent never runs a destructive one. Command Gate sits in between — it reads each command in full, decides whether it's safe, and only stops you when it matters.
+
+Simple commands pass instantly by deterministic rules, ambiguous ones go to an LLM assessor that sees the whole command together with your session context, and suspicious ones stop for your approval. Approvals are remembered until your intent or the project's scripts change, and OpenCode's own permission rules still apply on top.
+
 ## [Token Usage Panel](https://github.com/Glaicer/supercode-token-usage-panel)
 
 See where the tokens went with detailed spending stats, cache rate, cost, and live token-per-second generation speed in a collapsible sidebar panel. 
