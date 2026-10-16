@@ -6,9 +6,12 @@ Every plugin here started as a personal itch, ships as its own tiny package, and
 
 ## [Command Gate](https://github.com/Glaicer/supercode-command-gate)
 
-Coding agents execute dozens of shell commands per session, and OpenCode's permissions are coarse: you either approve every `ls` by hand, or allow everything and hope the agent never runs a destructive one. Command Gate sits in between — it reads each command in full, decides whether it's safe, and only stops you when it matters.
+Coding agents run dozens of shell commands per session. OpenCode's permissions are coarse: you either approve every `ls` by hand, or allow everything and hope the agent never hallucinates a destructive one.
 
-Simple commands pass instantly by deterministic rules, ambiguous ones go to an LLM assessor that sees the whole command together with your session context, and suspicious ones stop for your approval. Approvals are remembered until your intent or the project's scripts change, and OpenCode's own permission rules still apply on top.
+Command Gate is a permission layer that sits in between. It reads each command, decides whether it's safe, and only stops you when it matters.
+`ls src/` passes instantly by deterministic rules, no model call, no delay. `rm -rf /` is denied automatically. More complex commands and scripts the agent writes go to an LLM assessor that checks them against your session context: your goal, your latest request, and the agent's reasoning.
+
+Approvals are remembered until your intent or the project's scripts change. If OpenCode already blocks a command, Command Gate won't override that.
 
 ## [Token Usage Panel](https://github.com/Glaicer/supercode-token-usage-panel)
 
