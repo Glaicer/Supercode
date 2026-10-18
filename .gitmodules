@@ -25,3 +25,6 @@
 [submodule "command-gate"]
 	path = command-gate
 	url = https://github.com/Glaicer/supercode-command-gate.git
+[submodule "nonocode"]
+	path = nonocode
+	url = https://github.com/Glaicer/supercode-nonocode.git

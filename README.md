@@ -1,8 +1,8 @@
-# Supercode - a collection of OpenCode v2 plugins
+# Supercode - a collection of OpenCode v2 plugins and tools
 
 I spend most of my day inside OpenCode, so I started fixing the small things to make it more convinient. Then those fixes turned into this — a little shelf of tools I actually use every day.
 
-Every plugin here started as a personal itch, ships as its own tiny package, and lives in this repo as a git submodule.
+Every project here started as a personal itch and lives in this repo as a git submodule.
 
 ## [Command Gate](https://github.com/Glaicer/supercode-command-gate)
 
@@ -12,6 +12,12 @@ Command Gate is a permission layer that sits in between. It reads each command, 
 `ls src/` passes instantly by deterministic rules, no model call, no delay. `rm -rf /` is denied automatically. More complex commands and scripts the agent writes go to an LLM assessor that checks them against your session context: your goal, your latest request, and the agent's reasoning.
 
 Approvals are remembered until your intent or the project's scripts change. If OpenCode already blocks a command, Command Gate won't override that.
+
+## [nonocode](https://github.com/Glaicer/supercode-nonocode)
+
+Let your agent loose, just not on your whole machine. nonocode uses [nono](https://nono.sh/) to run OpenCode v2 in an OS-level sandbox. The agent can write to your project, temporary files, and OpenCode's own directories; the operating system blocks writes elsewhere.
+
+Pairs with Command Gate: that one decides which commands may run, this one limits where they can write. The sandbox protects against accidental writes, not deliberate escape attempts. See its README for installation.
 
 ## [Token Usage Panel](https://github.com/Glaicer/supercode-token-usage-panel)
 
@@ -71,9 +77,8 @@ For OpenCode v1, makes skills discoverable in `/` autocomplete. Skills already w
 
 ## Install
 
-Each plugin is its own repo, included here as a submodule. Easiest path is per-plugin, from its own README:
+Each project is its own repo, included here as a submodule. Start with its own README for installation. For plugins:
 
 ```bash
 opencode plugin add @glaicer/supercode-<name>
 ```
-
