@@ -65,14 +65,6 @@ For OpenCode v1, makes skills discoverable in `/` autocomplete. Skills already w
 
 **OpenCode v2:** This plugin is no longer needed. Use the built-in `@` skill picker instead; no installation is required.
 
-> \[!NOTE\]
-> More plugins are currently in development and will be shipped soon:
->
-> - **auto-approval-reviewer**: a must-have feature of Codex and Claude Code that uses LLM to evaluate the security of commands before running them.
-> - **goal-loop**: `/goal "<done-condition>"` keeps the agent working through idle until a judge verdict says it's met. A lot of harnesses has it already, but OpenCode doesn't.
-> - **persistent-memory**: durable project `MEMORY.md` + per-session notes with FTS search via `memory.search`.
-> - **review-agent**: read-only `@review` agent that checks Standards vs Spec and persists the verdict.
-
 ---
 
 ## Install
